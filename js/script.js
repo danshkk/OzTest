@@ -25,7 +25,7 @@ const isMobile = {
 			isMobile.Windows());
 	}
 };
-
+// смена класса
 if (isMobile.any()) {
 	document.body.classList.add('_touch');
 	let menuArrows = document.querySelectorAll('.menu__arrow');
@@ -70,7 +70,6 @@ if (iconMenu) {
 }
 
 
-// Прокрутка при клике
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {

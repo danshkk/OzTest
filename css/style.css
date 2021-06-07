@@ -1,32 +1,3 @@
-/* Обнуление */
-*,
-*::before,
-*::after {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	box-sizing: border-box;
-}
-a {
-	text-decoration: none;
-}
-ul,
-ol,
-li {
-	list-style: none;
-}
-img {
-	vertical-align: top;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: inherit;
-	font-size: inherit;
-}
 html,
 body {
 	height: 100%;
@@ -43,8 +14,6 @@ body._lock {
 	min-height: 100%;
 }
 /* ------------------ */
-/* ------------------ */
-/* ------------------ */
 
 .page {
 	padding: 90px 0px 30px 0px;
@@ -54,7 +23,7 @@ body._lock {
 	max-width: 1200px;
 	margin: 0px auto;
 }
-.page__section_1 {
+.page__section_1, .page__section_3, .page__section_5 {
 	background-color: #0e1525;
 }
 .page__title {
@@ -88,19 +57,11 @@ body._lock {
 	display: flex;
 	padding: 0px 30px;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 	min-height: 70px;
-}
-.header__menu {
-}
-.menu {
 }
 .menu__icon {
 	display: none;
-}
-.menu__body {
-}
-.menu__list {
 }
 .menu__list > li {
 	margin: 0px 0px 0px 30px;
@@ -210,7 +171,7 @@ body._touch .menu__sub-list > li._active .menu__sub-arrow {
 		align-items: center;
 	}
 	.menu__list > li {
-		padding: 10px 0;
+		padding: 15px 0;
 	}
 	.menu__list > li:first-child {
 		margin: 0;
@@ -219,7 +180,7 @@ body._touch .menu__sub-list > li._active .menu__sub-arrow {
 		transform: translate(0px, 10%);
 		opacity: 0;
 		visibility: hidden;
-		/* pointer-events: none; */
+		pointer-events:auto;
 		transition: all 0.3s ease 0s;
 	}
 	.menu__heading-list {
@@ -233,7 +194,8 @@ body._touch .menu__sub-list > li._active .menu__sub-arrow {
 	.menu__heading-list {
 		display: none;
 		margin: 20px 0;
-		padding: 0 10px;
+		padding: 20px 10px;
+		background-color: rgba(31, 60, 83, 0.8);
 	}
 	.menu__icon {
 		z-index: 5;
@@ -328,6 +290,9 @@ body._touch .menu__sub-list > li._active .menu__sub-arrow {
 		flex: 1 1 100%;
 		margin: 20px 0px 0px 0px;
 		display: none;
+	}
+	.menu__sub-list li {
+		margin: 0px 0px 20px 0px;
 	}
 	.menu__sub-link {
 		font-size: 20px;
