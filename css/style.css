@@ -250,10 +250,12 @@ body._touch .menu__sub-list > li._active .menu__sub-arrow {
 	.menu__icon._active::before {
 		top: 50%;
 		transform: rotate(-45deg) translate(0px, -50%);
+		background-color: rgb(255, 179, 0);
 	}
 	.menu__icon._active::after {
 		bottom: 50%;
 		transform: rotate(45deg) translate(0px, 50%);
+		background-color: rgb(255, 179, 0);
 	}
 
 	.menu__body {
@@ -262,7 +264,7 @@ body._touch .menu__sub-list > li._active .menu__sub-arrow {
 		left: -100%;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(9, 19, 27, 0.95);
+		background-color: rgba(9, 19, 27, 1);
 		padding: 100px 30px 30px 30px;
 		transition: left 0.3s ease 0s;
 		overflow: auto;
@@ -306,7 +308,10 @@ body._touch .menu__sub-list > li._active .menu__sub-arrow {
 		display: none;
 	}
 	.menu__sub-list li {
-		margin: 0px 0px 20px 0px;
+		margin-bottom: 20px;
+	}
+	.menu__heading-list li {
+		margin-bottom: 20px;
 	}
 	.menu__sub-link {
 		font-size: 20px;

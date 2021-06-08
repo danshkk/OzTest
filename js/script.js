@@ -29,15 +29,24 @@ const isMobile = {
 if (isMobile.any()) {
 	document.body.classList.add('_touch');
 	let menuArrows = document.querySelectorAll('.menu__arrow');
+	
 	if (menuArrows.length > 0) {
 		for (let index = 0; index < menuArrows.length; index++) {
 			const menuArrow = menuArrows[index];
 			menuArrow.addEventListener("click", function (e) {
-				menuArrow.parentElement.classList.toggle('_active');
+				if(!(e.target.parentElement.classList.contains('_active'))){
+					menuArrows.forEach(function (event){
+						event.parentElement.classList.remove('_active')
+					})
+					if(!e.target.parentElement.classList.contains('_active')){
+						e.target.parentElement.classList.add('_active')
+					}
+				}else {
+					e.target.parentElement.classList.remove('_active')
+				}
 			});
 		}
 	}
-
 } else {
 	document.body.classList.add('_pc');
 }
@@ -49,11 +58,19 @@ if (isMobile.any()) {
 		for (let index = 0; index < menuSubArrows.length; index++) {
 			const menuSubArrow = menuSubArrows[index];
 			menuSubArrow.addEventListener("click", function (e) {
-				menuSubArrow.parentElement.classList.toggle('_active');
+				if(!(e.target.parentElement.classList.contains('_active'))){
+					menuSubArrows.forEach(function (event){
+						event.parentElement.classList.remove('_active')
+					})
+					if(!e.target.parentElement.classList.contains('_active')){
+						e.target.parentElement.classList.add('_active')
+					}
+				}else {
+					e.target.parentElement.classList.remove('_active')
+				}
 			});
 		}
 	}
-
 } else {
 	document.body.classList.add('_pc');
 }
